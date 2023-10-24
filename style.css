@@ -1,0 +1,167 @@
+*{
+    margin: 0;bottom: 0;
+    box-sizing: border-box;
+    user-select: none;
+}
+/* width */
+::-webkit-scrollbar {
+    width: 5px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+    background: #888;   
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}
+
+.containerBody{
+    display: flex;
+    flex-direction: column;
+}
+.menu{
+    display: flex;
+    justify-content: center;
+    position: absolute;
+    right: 5px;
+    top: 5px;
+    z-index: 5;
+    height: fit-content;
+}
+.menu select{
+    background-color: white;
+    font-size: 1.5rem;
+    padding: 5px 10px;
+    border-radius: 10px;
+    outline: none;
+}
+section.container{
+    flex-grow: 1;
+    border-radius: 20px;
+    height: 100dvh;
+    position: relative;
+}
+
+/*   */
+.stack, .bubble{
+    position: absolute;
+    left: 50%;
+    top:50%;
+    width: 100%;
+    height: 100%;
+    transform: translate(-50%, -50%);
+    background-color: #e7e9eb;
+    display: flex;
+    justify-content: space-between;
+}
+.stack-container, .stack-items{
+    padding: 5px 10px;
+    overflow: hidden;
+    overflow-y: scroll;
+    font-size: 1.5em;
+}
+.stack-container{
+    position: relative;
+    background-color: aqua;
+    text-align:center ;
+}
+
+.stack-box{
+    position: relative;
+    top:50%;
+    left: -5%;
+    background:rgb(197, 197, 197);
+    height: 50%;
+    width: 50%;
+    text-align: center;
+    font-size: 1.5rem;
+    border:2px solid rgb(197, 197, 197);
+    border-radius: 15px 15px 5px 5px;
+    border-top: 10px solid rgb(252, 243, 230);
+    display: flex;
+    flex-direction: column-reverse;
+    max-height: 90%;
+    overflow-y: scroll;
+}
+.stack-box *:last-child{
+    border-radius: 5px 5px 0 0;
+}
+.stack-box *{
+    cursor: pointer;
+    background-color: rgb(232, 255, 116);
+    padding:10px 40px;
+    pointer-events:none;
+    color: #ff0008;
+    font-weight: bold;
+    box-shadow: 0 0 5px rgba(0, 0, 0,0.5);
+    text-shadow: 2px 2px 3px rgba(0, 0, 0, 0.2);
+}
+.stack-box *:nth-child(2n){
+    background-color: rgb(255, 162, 95);
+}
+.stack-box::after{
+    content: attr(empty);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+    font-size: 5vw;
+    position: relative;
+    top: 0;left: 0;
+    height: 100%;
+    width: 100%;
+}
+.stack-container *, .stack-items *{
+    cursor: pointer;
+    background-color: rgb(255, 255, 255);
+    border: 2px solid #f1f1f1;
+    padding:8px 40px;
+    border-radius: 5px;
+    margin: 2px 0;
+    box-shadow: 0px 0px 5px rgba(0,0,0,0.5);
+}
+
+.stack-container *:hover, .stack-box *:hover, .stack-items *:hover{
+    background-color: rgb(255, 162, 95);
+}
+
+.dropLoc{
+    position: absolute;
+    left: 40%;
+    top: 20%;
+    width: fit-content;
+}
+.dropLoc div{
+    display: flex;
+    align-items:center;
+    flex-direction: column;
+    gap: 35px;
+}
+.dropLoc p, .dropLoc input{
+    position: relative;
+    text-align: center;
+    font-size: 18px;
+    background-color: #f1f1f1;
+    color: rgb(104, 104, 104);
+    border: 2px solid rgb(193, 193, 193);
+    padding: 50px 50px;
+    border-radius: 15px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.6);
+}
+.dropLoc input{
+    position: relative;
+    height: fit-content;
+    padding:20px 60px;
+}
+.dropLoc input:hover{
+    background-color: #dbdbdb;
+    cursor: pointer;
+}

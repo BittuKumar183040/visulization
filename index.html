@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Visualizer</title>
+    <link rel="stylesheet" href="./style.css"/>
+    <script src="./script.js" defer></script>
+</head>
+<body ondrop="resetDrop(event)" ondragover="allowDrop(event)">
+    <div class="containerBody">
+        <section class="menu">
+            <select onchange="selector(event)">
+                <option value="stack" selected>Stack</option>
+                <option value="queue">Queue</option>
+                <option value="bubble">Bubble Sort</option>
+            </select>
+        </section>
+        <section class="container">
+            <div class="queue">Queue is here</div>
+            <div class="stack">
+                <div class="stack-container">
+                    <p id="a" draggable="true" ondragstart="drag(event)">a</p>
+                    <p id="b" draggable="true" ondragstart="drag(event)">b</p>
+                    <p id="c" draggable="true" ondragstart="drag(event)">c</p>
+                    <p id="d" draggable="true" ondragstart="drag(event)">d</p>
+                    <p id="e" draggable="true" ondragstart="drag(event)">e</p>
+                    <p id="f" draggable="true" ondragstart="drag(event)">f</p>
+                    <p id="g" draggable="true" ondragstart="drag(event)">g</p>
+                    <p id="h" draggable="true" ondragstart="drag(event)">h</p>
+                    <p id="i" draggable="true" ondragstart="drag(event)">i</p>
+                    <p id="j" draggable="true" ondragstart="drag(event)">j</p>
+                    <p id="k" draggable="true" ondragstart="drag(event)">k</p>
+                    <p id="l" draggable="true" ondragstart="drag(event)">l</p>
+                    <p id="m" draggable="true" ondragstart="drag(event)">m</p>
+                    <p id="n" draggable="true" ondragstart="drag(event)">n</p>
+                    <p id="o" draggable="true" ondragstart="drag(event)">o</p>
+                    <p id="p" draggable="true" ondragstart="drag(event)">p</p>
+                    <p id="q" draggable="true" ondragstart="drag(event)">q</p>
+                    <p id="r" draggable="true" ondragstart="drag(event)">r</p>
+                    <p id="s" draggable="true" ondragstart="drag(event)">s</p>
+                    <p id="t" draggable="true" ondragstart="drag(event)">t</p>
+                    <p id="u" draggable="true" ondragstart="drag(event)">u</p>
+                    <p id="v" draggable="true" ondragstart="drag(event)">v</p>
+                    <p id="w" draggable="true" ondragstart="drag(event)">w</p>
+                    <p id="x" draggable="true" ondragstart="drag(event)">x</p>
+                    <p id="y" draggable="true" ondragstart="drag(event)">y</p>
+                    <p id="z" draggable="true" ondragstart="drag(event)">z</p>
+                </div>
+                <div onkeyup="filter(event)"
+                    class="dropLoc" 
+                    ondrop="drop(event)"
+                    ondragover="allowDrop(event)"
+                >
+                    <div>
+                        <p>Drop To PUSH</p>
+                        <input onclick="pop()" type="button" value="POP"/>
+                    </div>
+                </div>
+                <div class="stack-box" >
+                </div>
+            </div>
+        </section>
+    </div>
+</body>
+</html>
